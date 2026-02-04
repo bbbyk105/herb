@@ -1,15 +1,21 @@
 export default function Home() {
   return (
     <div className="bg-white text-black">
-      <header className="relative h-[1080px] w-full overflow-hidden">
+      <header className="relative h-[640px] w-full overflow-hidden md:h-[576px] lg:h-[810px] 2xl:h-[1080px]">
         <div className="absolute inset-0">
-          <img
-            src="/images2/fv_pc_01.webp"
-            alt=""
-            className="h-full w-full object-cover"
-          />
+          <picture>
+            <source
+              media="(max-width: 639px)"
+              srcSet="/images2/fv_sp_01.webp"
+            />
+            <img
+              src="/images2/fv_pc_01.webp"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </picture>
         </div>
-        <div className="absolute left-[76.8px] top-[76.8px]">
+        <div className="absolute left-4 top-4 sm:left-10 sm:top-10 lg:left-[57.6px] lg:top-[57.6px] 2xl:left-[76.8px] 2xl:top-[76.8px]">
           <div className="font-(--font-display) text-[40px] leading-none tracking-[0.25em] text-white">
             herbacie
           </div>
@@ -19,7 +25,7 @@ export default function Home() {
         </div>
         <a
           href="#reserve"
-          className="absolute right-0 top-[859.75px] block h-[160.25px] w-[50px]"
+          className="absolute right-0 top-[383.75px] block h-[160.25px] w-[50px] md:top-[383.75px] lg:top-[520px] 2xl:top-[859.75px]"
           aria-label="reserve"
         >
           <img
@@ -32,9 +38,9 @@ export default function Home() {
 
       <main className="mx-auto w-full max-w-[1920px]">
         {/* Who we are */}
-        <section className="px-[360px] pt-[40px]">
-          <div className="mx-auto w-[1200px]">
-            <div className="pt-[50px]">
+        <section className="px-4 pt-10 sm:px-10 lg:px-[120px] 2xl:px-[360px]">
+          <div className="mx-auto w-full max-w-[1200px]">
+            <div className="pt-12 sm:pt-[50px]">
               <div className="flex items-center gap-2 text-[13px] leading-[26px] tracking-[0.04em] text-black">
                 <span className="h-px w-5 bg-black/60" />
                 <span className="lowercase">who we are</span>
@@ -42,31 +48,31 @@ export default function Home() {
               <h2 className="mt-2 font-(--font-display) text-[25.6px] leading-[28.16px] tracking-[0.02em] text-black">
                 herbacie LABO
               </h2>
-              <p className="mt-8 text-[14px] leading-[25.2px] text-black">
+              <p className="mt-6 max-w-[819px] text-[14px] leading-[25.2px] text-black lg:mt-8">
                 東京・恵比寿にある herbacie LABO は、
                 herbacieの哲学と確かな技術で、 心・からだ・精神をまるごと整える
                 トータルサロンです。
               </p>
             </div>
 
-            <div className="mt-[100px] grid grid-cols-2 gap-6">
+            <div className="mt-16 grid grid-cols-2 gap-3 sm:gap-6 lg:mt-[100px]">
               <img
                 src="/images2/herbacie_labo_01.png"
                 alt=""
-                className="h-[404.25px] w-[588px] object-cover"
+                className="aspect-[588/404.25] w-full object-cover"
               />
               <img
                 src="/images2/herbacie_labo_02.png"
                 alt=""
-                className="h-[404.25px] w-[588px] object-cover"
+                className="aspect-[588/404.25] w-full object-cover"
               />
             </div>
 
-            <div className="relative mt-[70px] pb-[80px]">
-              <h3 className="ml-[76.8px] text-[20.8px] leading-[22.88px] text-black">
+            <div className="relative mt-12 pb-16 lg:mt-[70px] lg:pb-[80px]">
+              <h3 className="text-[19.2px] font-light leading-[21.12px] text-black sm:text-[20.8px] sm:font-normal sm:leading-[22.88px] lg:ml-[57.6px] 2xl:ml-[76.8px]">
                 herbacieの哲学とは
               </h3>
-              <div className="ml-[76.8px] mt-10 text-[14px] leading-[25.2px] text-black">
+              <div className="mt-6 text-[14px] leading-[25.2px] text-black sm:mt-8 lg:ml-[102.4px] lg:max-w-[819px] 2xl:ml-[76.8px] 2xl:max-w-none">
                 <p>
                   フィトテラピー*植物療法を軸に、
                   「五行思想」と「五感」のつながりに着目した〈五行五感〉。
@@ -85,24 +91,24 @@ export default function Home() {
               <img
                 src="/images2/herbacie_labo_bg.png"
                 alt=""
-                className="absolute right-[20px] top-[110px] h-[272.94px] w-[400px] object-contain opacity-60"
+                className="pointer-events-none absolute right-0 top-[260px] h-[133.05px] w-[195px] object-contain opacity-60 sm:h-[272.94px] sm:w-[400px] lg:top-[110px]"
               />
             </div>
           </div>
         </section>
 
         {/* Floor Guide */}
-        <section className="px-[360px] pt-0">
-          <div className="mx-auto w-[1200px]">
-            <div className="ml-[76.8px] flex items-center gap-2 text-[13px] leading-[26px] tracking-[0.04em] text-black">
+        <section className="px-4 pt-0 sm:px-10 lg:px-[120px] 2xl:px-[360px]">
+          <div className="mx-auto w-full max-w-[1200px]">
+            <div className="flex items-center gap-2 text-[13px] leading-[26px] tracking-[0.04em] text-black lg:ml-[57.6px] 2xl:ml-[76.8px]">
               <span className="h-px w-5 bg-black/60" />
               <span className="lowercase">our spaces</span>
             </div>
-            <h2 className="ml-[76.8px] mt-2 text-[25.6px] leading-[28.16px] text-black">
+            <h2 className="mt-2 text-[25.6px] leading-[28.16px] text-black lg:ml-[57.6px] 2xl:ml-[76.8px]">
               Floor Guide
             </h2>
 
-            <div className="ml-[76.8px] mt-10 grid grid-cols-3 gap-[30px]">
+            <div className="mt-8 grid grid-cols-1 gap-8 sm:mt-10 md:grid-cols-3 md:gap-[30px] lg:ml-[57.6px] 2xl:ml-[76.8px]">
               {[
                 {
                   floor: "1F",
@@ -123,7 +129,7 @@ export default function Home() {
                   desc: "緑に囲まれた自然の中で行うマンツーマンのピラテ ィス。精油ミストを呼吸から取り入れることで、身体 がよりほぐれ、心身のバランスが整います。",
                 },
               ].map((c) => (
-                <div key={c.floor} className="pt-[30px]">
+                <div key={c.floor} className="pt-0 md:pt-[30px]">
                   <div className="flex items-end gap-2">
                     <div className="text-[20.8px] leading-[25px] text-black">
                       {c.floor}
@@ -135,7 +141,7 @@ export default function Home() {
                   <img
                     src={c.img}
                     alt=""
-                    className="mt-[30px] h-[226.33px] w-[328.78px] object-cover"
+                    className="mt-6 aspect-[328.78/226.33] w-full object-cover md:mt-[30px]"
                   />
                   <p className="mt-4 text-[14px] leading-[25.2px] text-black">
                     {c.desc}
@@ -154,7 +160,7 @@ export default function Home() {
 
         {/* Reserve */}
         <section id="reserve" className="mt-[40px] bg-accent py-10">
-          <div className="mx-auto w-[1200px] px-[76.8px]">
+          <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-10 lg:px-[57.6px] 2xl:px-[76.8px]">
             <div className="flex items-center gap-2 text-[13px] leading-[26px] tracking-[0.04em] text-white">
               <span className="h-px w-5 bg-white/70" />
               <span className="lowercase">schedule a session</span>
@@ -162,7 +168,7 @@ export default function Home() {
             <h2 className="mt-2 text-[25.6px] leading-[28.16px] text-white">
               Reserve
             </h2>
-            <div className="mt-8 grid grid-cols-2 gap-[30px]">
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-[30px]">
               <a
                 href="#"
                 className="inline-flex h-12 items-center justify-center border border-white/70 text-[14px] leading-[25.2px] text-white hover:bg-white/10"
@@ -180,18 +186,18 @@ export default function Home() {
         </section>
 
         {/* Information */}
-        <section className="px-[360px] pt-[50px]">
-          <div className="mx-auto grid w-[1200px] grid-cols-[502.5px_1fr] gap-[50px]">
-            <div className="pt-[50px]">
-              <div className="ml-[76.8px] flex items-center gap-2 text-[13px] leading-[26px] tracking-[0.04em] text-black">
+        <section className="px-4 pt-12 sm:px-10 lg:px-[120px] 2xl:px-[360px]">
+          <div className="mx-auto grid w-full max-w-[1200px] grid-cols-1 gap-10 lg:grid-cols-[502.5px_1fr] lg:gap-[50px]">
+            <div className="pt-0 lg:pt-[50px]">
+              <div className="flex items-center gap-2 text-[13px] leading-[26px] tracking-[0.04em] text-black lg:ml-[57.6px] 2xl:ml-[76.8px]">
                 <span className="h-px w-5 bg-black/60" />
                 <span className="lowercase">how to find us</span>
               </div>
-              <h2 className="ml-[76.8px] mt-2 text-[25.6px] leading-[28.16px] text-black">
+              <h2 className="mt-2 text-[25.6px] leading-[28.16px] text-black lg:ml-[57.6px] 2xl:ml-[76.8px]">
                 Information
               </h2>
 
-              <div className="ml-[76.8px] mt-8">
+              <div className="mt-8 lg:ml-[57.6px] 2xl:ml-[76.8px]">
                 <h3 className="text-[20.8px] leading-[22.88px] text-black">
                   営業時間
                 </h3>
@@ -211,7 +217,7 @@ export default function Home() {
                 </dl>
               </div>
 
-              <div className="ml-[76.8px] mt-14">
+              <div className="mt-14 lg:ml-[57.6px] 2xl:ml-[76.8px]">
                 <h3 className="text-[20.8px] leading-[22.88px] text-black">
                   店舗情報
                 </h3>
@@ -227,36 +233,36 @@ export default function Home() {
                 </p>
                 <a
                   href="#"
-                  className="mt-6 inline-flex h-12 w-[348.91px] items-center justify-center border border-muted text-[14px] leading-[25.2px] hover:bg-black/5"
+                  className="mt-6 inline-flex h-12 w-full max-w-[348.91px] items-center justify-center border border-muted text-[14px] leading-[25.2px] hover:bg-black/5"
                 >
                   Access
                 </a>
               </div>
             </div>
 
-            <div className="pt-[50px]">
+            <div className="pt-0 lg:pt-[50px]">
               <img
                 src="/images2/herbacie_labo_03.png"
                 alt=""
-                className="h-[339.55px] w-[493.91px] object-cover"
+                className="aspect-[493.91/339.55] w-full object-cover"
               />
               <img
                 src="/images2/herbacie_labo_04.png"
                 alt=""
-                className="mt-5 h-[339.55px] w-[493.91px] object-cover"
+                className="mt-5 aspect-[493.91/339.55] w-full object-cover"
               />
             </div>
           </div>
         </section>
 
         {/* FAQ */}
-        <section className="px-[360px] pt-[40px]">
-          <div className="mx-auto w-[1200px]">
-            <div className="ml-[76.8px] flex items-center gap-2 text-[13px] leading-[26px] tracking-[0.04em] text-black">
+        <section className="px-4 pt-10 sm:px-10 lg:px-[120px] 2xl:px-[360px]">
+          <div className="mx-auto w-full max-w-[1200px]">
+            <div className="flex items-center gap-2 text-[13px] leading-[26px] tracking-[0.04em] text-black lg:ml-[57.6px] 2xl:ml-[76.8px]">
               <span className="h-px w-5 bg-black/60" />
               <span className="lowercase">your questions, answered</span>
             </div>
-            <h2 className="ml-[76.8px] mt-2 text-[25.6px] leading-[28.16px] text-black">
+            <h2 className="mt-2 text-[25.6px] leading-[28.16px] text-black lg:ml-[57.6px] 2xl:ml-[76.8px]">
               FAQ
             </h2>
             <ul className="mt-8 border-t border-muted">
